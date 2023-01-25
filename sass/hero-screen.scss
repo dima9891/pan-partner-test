@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.hero-screen {
+    display: flex;
+    background-color: $black-dark;
+    color: $white;
+    padding-top: 106px;
+    padding-bottom: 137px;
+
+    .container {
+        display: flex;
+    }
+
+    &__content{
+        flex-grow: 1;
+    }
+
+    &__illusration {
+        img {
+            min-width: 309px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: $gray-light;
+        }
+
+        &__policy {
+            width: 100%;
+
+            label {
+                display: inline;
+                margin-bottom: 0;
+            }
+            a {
+                color: $red;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__button{
+        padding: 21px 26px;
+        margin: 38px 0;
+        border-radius: 30px;
+    }
+}

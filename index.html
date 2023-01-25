@@ -7,6 +7,9 @@
     <title>ПАН-Партнер: недвижимость Санкт-Петербурга и Москвы</title>
 </head>
 <body>
+
+    <!-- Header -->
+    
     <div class="header">
         <div class="header-menu">
             <div class="header-logo">
@@ -47,6 +50,42 @@
             <a href="#" class="header-menu-item">Пункт 5</a>
         </div>
         <div class="header-button btn-red">Кнопка</div>
+    </div>
+
+    <!-- First screen -->
+
+    <div class="hero-screen">
+        <div class="container">
+            <div class="hero-screen__content">
+                <h1 class="h1">Недвижимость <br>
+                    Санкт-Петербурга <br>
+                    и Москвы</h1>
+                <form class="hero-screen__form" action="">
+                    <div class="col-50">
+                        <label>Выбрать город</label>
+                        <select name="" id="">
+                            <option value="Москва">Москва</option>
+                            <option value="Санкт-Петербург">Санкт-Петербург</option>
+                            <option value="Владивосток">Владивосток</option>
+                            <option value="Оренбург">Оренбург</option>
+                        </select>
+                    </div>
+                    <div class="col-50">
+                        <label>Ваш e-mail</label>
+                        <input type="email" placeholder="info@mail.ru">
+                    </div>    
+                    <button type="submit" class="hero-screen__button btn-red">Кнопка действия</button>
+                    <div class="hero-screen__form__policy">
+                        <input type="checkbox" id="" name="policy">
+                        <label for="policy">Отправляя нам данную форму вы соглашаетесь с <br>
+                            <a href="#">политикой конфиденциальности</a></label>
+                    </div>
+                </form>
+            </div>
+            <div class="hero-screen__illusration">
+                <img src="images/first-screen-illustration.svg">
+            </div>
+        </div>
     </div>
 
     <link rel="stylesheet" href="css/styles.css">
