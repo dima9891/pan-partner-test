@@ -42,7 +42,7 @@ p, div, .text {
     }
 }
 
-h1, .h1 {
+.h1 {
     @include header();
 
     font-size: 30px;
@@ -59,7 +59,7 @@ h1, .h1 {
     }
 }
 
-h2, .h2 {
+.h2 {
     @include header();
 
     font-size: 26px;
@@ -76,7 +76,7 @@ h2, .h2 {
     }
 }
 
-h3, .h3 {
+.h3 {
     @include header();
 
     font-size: 18px;
@@ -110,6 +110,6 @@ h3, .h3 {
     }
 }
 
-h5, .h5 {
+.h5 {
     @include h5-style();
 }
