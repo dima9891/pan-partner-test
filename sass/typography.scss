@@ -1,10 +1,13 @@
 @import 'variables.scss';
 @import 'fonts.scss';
 
+body {
+    color: $black-light;
+}
+
 @mixin text {
     font-family: 'Formular', sans-serif;
     font-style: normal;
-    color: $black-light;
 }
 
 @mixin header {
@@ -13,7 +16,7 @@
     font-weight: 700;
 }
 
-p, .text {
+p, div, .text {
     @include text();
 
     font-weight: 400;
@@ -90,7 +93,7 @@ h3, .h3 {
     }
 }
 
-h5, .h5 {
+@mixin h5-style {
     @include header();
 
     font-size: 14px;
@@ -105,4 +108,8 @@ h5, .h5 {
         font-size: 16px;
         line-height: 20px;
     }
+}
+
+h5, .h5 {
+    @include h5-style();
 }

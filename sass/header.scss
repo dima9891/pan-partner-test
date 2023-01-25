@@ -1,0 +1,113 @@
+@import 'variables.scss';
+@import 'typography.scss';
+
+.header {
+    background-color: $black-light;
+    padding: 0 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+
+    @media (min-width: $standart-screen) {
+        min-height: 80px;
+        padding: 0 40px;
+    }
+
+    @media (min-width: $widescreen) {
+        padding: 0 65px;
+    }
+
+    &-logo {
+        padding-right: 3.9vw;
+        img {
+            width: 58px;
+        }
+
+        @media (min-width: $standart-screen) {
+            img {
+                width: 75px
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+
+        .subnav {
+            position: relative;
+
+            &-menu {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: $black-light;
+                z-index: 1;
+                min-width: 535px;
+                padding: 0 21px 0 33px;
+                border-radius: 9px;
+
+                &__group {
+                    display: flex;
+                }
+
+                hr {
+                    border: solid 0.5px #8f95ac;
+                    opacity: 50%;
+                }
+
+                &__item {
+                    margin: 23px 0 20px 0;
+                    flex-grow: 1;
+
+                    &__header {
+                        @include h5-style();
+                        margin-bottom: 6px;
+
+                        &::before {
+                            content: '';
+                            background-image: url(../images/submenu-header.svg);
+                            display: block;
+                            float: left;
+                            width: 21px;
+                            height: 14px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            margin-right: 12px;
+                            margin-bottom: 2em;
+                        }
+                    }
+                    &__text {
+                        color: $gray-light;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            @include h5-style();
+
+            padding: 10px 22px;
+            border-radius: 30px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $gray-light;
+            }
+        }
+    }
+
+    &-button {
+        width: 124px;
+        height: 40px;
+        border-radius: 20px;
+
+        @media (min-width: $standart-screen) {
+            width: 145px;
+            height: 50px;
+            border-radius: 25px;
+        }
+    }
+}

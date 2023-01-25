@@ -5,6 +5,9 @@ const concat = require('gulp-concat')
 function buildStyles() {
     return gulp
         .src("./sass/*.scss")
+        .pipe(sass({
+            includePaths: ['node_modules']
+        }))
         .pipe(concat('styles.css'))
         .pipe(
             sass.sync({ outputStyle: "compressed" }).on("error", sass.logError)

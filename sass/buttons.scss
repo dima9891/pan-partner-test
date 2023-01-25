@@ -1,0 +1,18 @@
+@import 'variables.scss';
+@import 'typography.scss';
+
+.btn-red {
+    @include h5-style();
+
+    color: $white;
+    background-color: $red;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
+    }
+}
