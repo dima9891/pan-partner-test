@@ -20,12 +20,14 @@
     }
 
     &-logo {
-        padding-right: 3.9vw;
+
         img {
             width: 58px;
         }
 
         @media (min-width: $standart-screen) {
+            padding-right: 3.9vw;
+
             img {
                 width: 75px
             }
@@ -49,6 +51,8 @@
                 padding: 0 21px 0 33px;
                 border-radius: 9px;
 
+                display: none;
+
                 &__group {
                     display: flex;
                 }
@@ -64,6 +68,8 @@
 
                     &__header {
                         @include h5-style();
+                        color: $white;
+                        text-decoration: none;
                         margin-bottom: 6px;
 
                         &::before {
@@ -88,13 +94,20 @@
 
         &-item {
             @include h5-style();
+            
+            color: $white;
+            text-decoration: none;
 
             padding: 10px 22px;
             border-radius: 30px;
             cursor: pointer;
 
             &:hover {
-                background-color: $gray-light;
+                background-color: transparentize($gray-light, 0.8);
+            }
+
+            &.active {
+                background-color: $red;
             }
         }
     }
