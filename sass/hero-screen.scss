@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'buttons.scss';
+@import 'container.scss';
 
 .hero-screen {
     display: flex;
@@ -9,19 +10,10 @@
     padding-bottom: 137px;
 
     &__container {
+        @include container();
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        max-width: 604px;
-        margin-left: auto;
-        margin-right: auto;
-    
-        @media (min-width: $standart-screen) {
-            max-width: 996px;
-        }
-        @media (min-width: $widescreen) {
-            max-width: 1220px;
-        }
+        
     }
 }
 

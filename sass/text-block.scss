@@ -1,0 +1,13 @@
+@import 'container.scss';
+@import 'buttons.scss';
+
+.text-block {
+    @include container();
+    display: flex;
+    gap: 155px;
+
+    &__column {
+
+    }
+
+}

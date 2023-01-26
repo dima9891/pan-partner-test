@@ -1,0 +1,6 @@
+@import 'container.scss';
+
+.map-block {
+    @include container();
+    margin-top: 100px;
+}

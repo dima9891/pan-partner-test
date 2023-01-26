@@ -1,0 +1,45 @@
+@import 'variables.scss';
+@import 'typography.scss';
+
+.progress-bar {
+    background-color: transparentize($gray-light, 0.9);
+    width: 300px;
+    height: 40px;
+    border-radius: 100px;
+
+    .progress {
+        background-color: $black-light;
+        color: $white;
+        width: 10%;
+        min-width: 45px;
+        border-radius: 100px;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        transition: .5s;
+
+        .amount {
+            @include h5-style();
+        }
+    }
+
+    &__button {
+        @include h5-style();
+        width: 108px;
+        height: 60px;
+        border-radius: 30px;
+        color: $white;
+        background-color: $red;
+        cursor: pointer;
+        border: none;
+        line-height: 60px;
+
+        @media (min-width: $standart-screen) {
+            width: 180px;
+        }
+    
+        &:hover {
+            box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
+        }
+    }
+}

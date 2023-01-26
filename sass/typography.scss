@@ -10,7 +10,7 @@ body {
     font-style: normal;
 }
 
-@mixin header {
+@mixin heading {
     @include text();
 
     font-weight: 700;
@@ -43,7 +43,7 @@ p, div, .text {
 }
 
 .h1 {
-    @include header();
+    @include heading();
 
     font-size: 30px;
     line-height: 35px;
@@ -59,8 +59,12 @@ p, div, .text {
     }
 }
 
+@mixin h2-style {
+
+}
+
 .h2 {
-    @include header();
+    @include heading();
 
     font-size: 26px;
     line-height: 33px;
@@ -77,7 +81,7 @@ p, div, .text {
 }
 
 .h3 {
-    @include header();
+    @include heading();
 
     font-size: 18px;
     line-height: 22px;
@@ -94,7 +98,7 @@ p, div, .text {
 }
 
 @mixin h5-style {
-    @include header();
+    @include heading();
 
     font-size: 14px;
     line-height: 18px;

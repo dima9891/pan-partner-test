@@ -1,0 +1,22 @@
+@import 'container.scss';
+@import 'variables.scss';
+
+footer {
+    @include container();
+    display: flex;
+    border-top: 1px solid transparentize($gray-light, 0.8);
+    padding-top: 24px;
+    padding-bottom: 43px;
+
+    .adress {
+        width: 100%;
+    }
+    .phone {
+        width: 100%;
+        text-align: center;
+    }
+    .email {
+        width: 100%;
+        text-align: right;
+    }
+}
