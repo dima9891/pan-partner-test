@@ -1,0 +1,118 @@
+@import 'variables.scss';
+
+.select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+
+    .select {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparentize($gray-light, 0.6);
+        border-radius: 4px;
+
+        .select__trigger {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 21px;
+            color: $white;
+            height: 60px;
+            line-height: 60px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        &.open {
+            border-radius: 4px 4px 0 0;
+        }
+
+        &.open .custom-options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    .custom-options {
+        position: absolute;
+        display: block;
+        top: calc(100% + 1px);
+        left: -1px;
+        right: -1px;
+        border: 1px solid transparentize($gray-light, 0.6);
+        border-top: 0;
+        background: $black-dark;
+        transition: all 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 2;
+        padding: 21px 8px 24.5px 8px;
+
+        .custom-option {
+            position: relative;
+            display: block;
+            padding: 0 0 0 19px;
+            border-radius: 3px;
+            color: $white;
+            line-height: 35px;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: transparentize($gray-light, 0.9);
+            }
+
+            &.selected {
+                background-color: transparentize($gray-light, 0.9);
+            }
+        }
+    }
+}
+
+
+.arrow {
+    position: relative;
+    height: 8px;
+    width: 10px;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        width: 0.15rem;
+        height: 100%;
+        transition: all 0.5s;
+    }
+
+    &::before {
+        left: -2px;
+        transform: rotate(-45deg);
+        background-color: $white;
+        border-radius: 3px 3px 0;
+    }
+
+    &::after {
+        left: 2px;
+        transform: rotate(45deg);
+        background-color: $white;
+        border-radius: 3px 3px 0;
+    }
+
+    .open &::before {
+        left: -2px;
+        transform: rotate(45deg);
+        border-radius: 0 3px 3px;
+    }
+    .open &::after {
+        left: 2px;
+        transform: rotate(-45deg);
+        border-radius: 0 3px 3px;
+    }
+}

@@ -1,7 +1,7 @@
 @import 'variables.scss';
 @import 'typography.scss';
 
-.btn-red {
+@mixin button-red {
     @include h5-style();
 
     color: $white;
@@ -16,4 +16,8 @@
     &:hover {
         box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
     }
+}
+
+.btn-red {
+    @include button-red();
 }

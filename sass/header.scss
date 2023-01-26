@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'typography.scss';
+@import 'buttons.scss';
 
 .header {
     background-color: $black-light;
@@ -19,100 +20,9 @@
         padding: 0 65px;
     }
 
-    &-logo {
-
-        img {
-            width: 58px;
-        }
-
-        @media (min-width: $standart-screen) {
-            padding-right: 3.9vw;
-
-            img {
-                width: 75px
-            }
-        }
-    }
-
-    &-menu {
-        display: flex;
-        align-items: center;
-
-        .subnav {
-            position: relative;
-
-            &-menu {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                background-color: $black-light;
-                z-index: 1;
-                min-width: 535px;
-                padding: 0 21px 0 33px;
-                border-radius: 9px;
-
-                display: none;
-
-                &__group {
-                    display: flex;
-                }
-
-                hr {
-                    border: solid 0.5px #8f95ac;
-                    opacity: 50%;
-                }
-
-                &__item {
-                    margin: 23px 0 20px 0;
-                    flex-grow: 1;
-
-                    &__header {
-                        @include h5-style();
-                        color: $white;
-                        text-decoration: none;
-                        margin-bottom: 6px;
-
-                        &::before {
-                            content: '';
-                            background-image: url(../images/submenu-header.svg);
-                            display: block;
-                            float: left;
-                            width: 21px;
-                            height: 14px;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            margin-right: 12px;
-                            margin-bottom: 2em;
-                        }
-                    }
-                    &__text {
-                        color: $gray-light;
-                    }
-                }
-            }
-        }
-
-        &-item {
-            @include h5-style();
-            
-            color: $white;
-            text-decoration: none;
-
-            padding: 10px 22px;
-            border-radius: 30px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: transparentize($gray-light, 0.8);
-            }
-
-            &.active {
-                background-color: $red;
-            }
-        }
-    }
-
     &-button {
+        @include button-red();
+    
         width: 124px;
         height: 40px;
         border-radius: 20px;
@@ -121,6 +31,99 @@
             width: 145px;
             height: 50px;
             border-radius: 25px;
+        }
+    }
+}
+
+.logo {
+
+    &__img {
+        width: 58px;
+    }
+
+    @media (min-width: $standart-screen) {
+        padding-right: 3.9vw;
+
+        &__img {
+            width: 75px
+        }
+    }
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        @include h5-style();
+        
+        color: $white;
+        text-decoration: none;
+
+        padding: 10px 22px;
+        border-radius: 30px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparentize($gray-light, 0.8);
+        }
+
+        &.active {
+            background-color: $red;
+        }
+    }
+}
+
+.subnav {
+    position: relative;
+
+    &-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: $black-light;
+        z-index: 1;
+        min-width: 535px;
+        padding: 0 21px 0 33px;
+        border-radius: 9px;
+
+        display: none;
+
+        &__group {
+            display: flex;
+        }
+
+        hr {
+            border: solid 0.5px #8f95ac;
+            opacity: 50%;
+        }
+
+        &__item {
+            margin: 23px 0 20px 0;
+            flex-grow: 1;
+
+            &__header {
+                @include h5-style();
+                color: $white;
+                text-decoration: none;
+                margin-bottom: 6px;
+
+                &::before {
+                    content: '';
+                    background-image: url(../images/submenu-header.svg);
+                    display: block;
+                    float: left;
+                    width: 21px;
+                    height: 14px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    margin-right: 12px;
+                    margin-bottom: 2em;
+                }
+            }
+            &__text {
+                color: $gray-light;
+            }
         }
     }
 }

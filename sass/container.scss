@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+body {
+    margin: 0;
+}
+
 .container {
     width: 100%;
     max-width: 604px;
@@ -15,5 +19,9 @@
 }
 
 .col-50 {
-    width: 50%;
+    width: 100%;
+
+    @media (min-width: $standart-screen) {
+        width: 50%
+    }
 }
