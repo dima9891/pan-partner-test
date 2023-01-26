@@ -79,7 +79,6 @@
 
     &-menu {
         position: absolute;
-        top: 70px;
         left: 0;
         background-color: $black-light;
         z-index: 1;
@@ -87,7 +86,11 @@
         padding: 0 21px 0 33px;
         border-radius: 9px;
 
-        display: none;
+        visibility: hidden;
+
+        &.open {
+            visibility: visible;
+        }
 
         &__group {
             display: flex;
