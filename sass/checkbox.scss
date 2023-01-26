@@ -1,0 +1,59 @@
+@import 'variables.scss';
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35.65px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    & input:checked ~ .checkmark:after {
+        display: block;
+    }
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: transparent;
+        border: 1px solid transparentize($gray-light, 0.6);
+        border-radius: 2px;
+
+        &:after {
+            background-image: url(../images/check-mark-icon.svg);
+            background-repeat: no-repeat;
+            left: 3px;
+            top: 4px;
+            width: 13px;
+            height: 13px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+
+    &:hover input ~ .checkmark {
+        background-color: transparentize($gray-light, 0.6);
+    }
+    & input:checked ~ .checkmark {
+        background-color: $red;
+        border-color: $red;
+    }
+
+}
