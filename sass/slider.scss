@@ -1,9 +1,14 @@
 @import 'container.scss';
+@import 'variables.scss';
 
 .slider-block {
     @include container();
     margin-top: 70px;
     margin-bottom: 70px;
+
+    @media (min-width: $standart-screen) {
+        margin-bottom: 120px;
+    }
 
     &__header {
         text-align: center;
@@ -15,6 +20,40 @@
         .splide__slide {
             background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        .splide__arrow {
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            background: $white;
+            box-shadow: 0px 4px 20px rgba(143, 149, 172, 0.2);
+
+            svg {
+                width: 10px;
+                fill: $black-light;
+            }
+
+            &--prev {
+                left: -25px;
+            }
+            &--next {
+                right: -25px;
+            }
+        }
+
+        .splide__pagination {
+            bottom: -45px;
+
+            &__page {
+                height: 7px;
+                background: transparentize($gray-light, 0.7);
+
+                &.is-active {
+                    transform: none;
+                    background: $red;
+                }
+            }
         }
     }
 }
