@@ -3,7 +3,6 @@
 
 .progress-bar {
     background-color: transparentize($gray-light, 0.9);
-    width: 300px;
     height: 40px;
     border-radius: 100px;
 
@@ -25,7 +24,8 @@
 
     &__button {
         @include h5-style();
-        width: 108px;
+        max-width: 108px;
+        width: 100%;
         height: 60px;
         border-radius: 30px;
         color: $white;
@@ -35,11 +35,17 @@
         line-height: 60px;
 
         @media (min-width: $standart-screen) {
-            width: 180px;
+            max-width: 180px;
         }
     
         &:hover {
             box-shadow: 0px 10px 20px rgba(255, 45, 35, 0.3);
         }
     }
+}
+
+.button-with-text {
+    display: flex;
+    gap: 31px;
+    padding-top: 40px;
 }

@@ -4,10 +4,13 @@
 .text-block {
     @include container();
     display: flex;
-    gap: 155px;
 
     &__column {
+        width: 100%;
 
+        &.left {
+            padding-right: 100px;
+        }
     }
 
 }

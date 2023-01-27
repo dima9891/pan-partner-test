@@ -70,6 +70,11 @@
 
         &.active {
             background-color: $red;
+
+            i {
+                transform: rotate(180deg);
+                transition: 0.3s;
+            }
         }
     }
 }

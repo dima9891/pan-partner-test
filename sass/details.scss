@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+details.hidden-text {
+    padding-top: 30px;
+
+    summary {
+        cursor: pointer;
+        color: $gray-light;
+        list-style-type: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &[open] {
+        i {
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+    }
+}

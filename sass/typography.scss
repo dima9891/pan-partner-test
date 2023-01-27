@@ -16,7 +16,7 @@ body {
     font-weight: 700;
 }
 
-p, div, .text {
+p, div, summary, .text {
     @include text();
 
     font-weight: 400;
