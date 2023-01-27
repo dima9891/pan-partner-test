@@ -1,6 +1,27 @@
+@import 'variables.scss';
 @import 'container.scss';
 
 .map-block {
     @include container();
     margin-top: 100px;
+
+    .map-mobile {
+        @media (min-width: $standart-screen) {
+            display: none;
+        }
+
+    }
+    .map-standart {
+        @media (max-width: ($standart-screen - 1px)) {
+            display: none;
+        }
+        @media (min-width: $widescreen) {
+            display: none;
+        }
+    }
+    .map-widescreen {
+        @media (max-width: ($widescreen - 1px)) {
+            display: none;
+        }
+    }
 }

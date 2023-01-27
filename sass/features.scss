@@ -1,3 +1,4 @@
+@import 'variables.scss';
 @import 'container.scss';
 
 .features-block {
@@ -5,15 +6,23 @@
     margin-top: 80px;
     margin-bottom: 113px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
+
+    @media (min-width: $standart-screen) {
+        flex-wrap: nowrap;
+    }
 }
 
 .feature {
     box-shadow: 0px 0px 15px rgba(143, 149, 172, 0.15);
     border-radius: 5px;
     padding: 25px 0 25px 20px;
-    width: 100%;
+    width: 150px;
+
+    @media (min-width: $standart-screen) {
+        width: 100%;
+    }
 
     &:hover {
         box-shadow: 0px 0px 20px rgba(143, 149, 172, 0.4);

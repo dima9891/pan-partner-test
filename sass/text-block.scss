@@ -4,12 +4,20 @@
 .text-block {
     @include container();
     display: flex;
+    gap: 62px;
+
+    @media (min-width: $standart-screen) {
+        gap: 0;
+    }
 
     &__column {
         width: 100%;
 
         &.left {
-            padding-right: 100px;
+
+            @media (min-width: $standart-screen) {
+                padding-right: 100px;
+            }
         }
     }
 

@@ -37,8 +37,9 @@
 
 .logo {
 
-    &__img {
+    &__image {
         width: 58px;
+        padding-right: 20px;
     }
 
     @media (min-width: $standart-screen) {
