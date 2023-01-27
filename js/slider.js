@@ -1,6 +1,6 @@
 new Splide('.splide',{
     type : 'loop',
-    perPage: 3,
+    perPage: 2.5,
     perMove: 1,
     gap: 20,
     height: 341,
