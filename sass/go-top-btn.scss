@@ -1,0 +1,34 @@
+@import 'variables.scss';
+
+#goTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    .inner {
+        display: inline-flex;
+        align-items: center;
+        grid-gap: 10px;
+
+        &__text {}
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $black-light;
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
