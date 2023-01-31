@@ -1,26 +1,26 @@
-@import 'variables.scss';
-@import 'container.scss';
+@use 'variables' as v;
+@use 'container';
 
 .map-block {
-    @include container();
+    @include container.container();
     margin-top: 100px;
 
     .map-mobile {
-        @media (min-width: $standart-screen) {
+        @media (min-width: v.$standart-screen) {
             display: none;
         }
 
     }
     .map-standart {
-        @media (max-width: ($standart-screen - 1px)) {
+        @media (max-width: (v.$standart-screen - 1px)) {
             display: none;
         }
-        @media (min-width: $widescreen) {
+        @media (min-width: v.$widescreen) {
             display: none;
         }
     }
     .map-widescreen {
-        @media (max-width: ($widescreen - 1px)) {
+        @media (max-width: (v.$widescreen - 1px)) {
             display: none;
         }
     }

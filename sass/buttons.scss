@@ -1,11 +1,11 @@
-@import 'variables.scss';
-@import 'typography.scss';
+@use 'variables' as v;
+@use 'typography' as t;
 
 @mixin button-red {
-    @include h5-style();
+    @include t.h5-style();
 
-    color: $white;
-    background-color: $red;
+    color: v.$white;
+    background-color: v.$red;
     text-align: center;
     display: flex;
     flex-direction: column;

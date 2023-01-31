@@ -1,0 +1,25 @@
+@use "normalize.css/normalize";
+@use 'typography';
+@use 'variables';
+@use 'fonts';
+//blocks
+@use 'header';
+@use 'hero-screen';
+@use 'slider';
+@use 'text-block';
+@use 'map-block';
+@use 'features';
+@use 'footer';
+//elements
+@use 'buttons';
+@use 'checkbox';
+@use 'container';
+@use 'details';
+@use 'dropdown';
+@use 'go-top-btn';
+@use 'icons';
+@use 'images';
+@use 'progress-bar';
+@use 'rating';
+
+

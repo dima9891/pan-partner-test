@@ -1,33 +1,33 @@
-@import 'variables.scss';
-@import 'typography.scss';
-@import 'buttons.scss';
+@use 'variables' as v;
+@use 'typography' as t;
+@use 'buttons';
 
 .header {
-    background-color: $black-light;
+    background-color: v.$black-light;
     padding: 0 20px;
     min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: $white;
+    color: v.$white;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         min-height: 80px;
         padding: 0 40px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         padding: 0 65px;
     }
 
     &-button {
-        @include button-red();
+        @include buttons.button-red();
     
         width: 124px;
         height: 40px;
         border-radius: 20px;
 
-        @media (min-width: $standart-screen) {
+        @media (min-width: v.$standart-screen) {
             width: 145px;
             height: 50px;
             border-radius: 25px;
@@ -42,7 +42,7 @@
         padding-right: 20px;
     }
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         padding-right: 3.9vw;
 
         &__image {
@@ -53,12 +53,17 @@
 
 .top-menu {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
+    @media (min-width: v.$mobile) {
+        flex-wrap: nowrap;
+    }
+
     &__item {
-        @include h5-style();
+        @include t.h5-style();
         
-        color: $white;
+        color: v.$white;
         text-decoration: none;
 
         padding: 10px 22px;
@@ -66,11 +71,11 @@
         cursor: pointer;
 
         &:hover {
-            background-color: transparentize($gray-light, 0.8);
+            background-color: transparentize(v.$gray-light, 0.8);
         }
 
         &.active {
-            background-color: $red;
+            background-color: v.$red;
 
             i {
                 transform: rotate(180deg);
@@ -86,7 +91,7 @@
     &-menu {
         position: absolute;
         left: 0;
-        background-color: $black-light;
+        background-color: v.$black-light;
         z-index: 1;
         min-width: 535px;
         padding: 0 21px 0 33px;
@@ -112,8 +117,8 @@
             flex-grow: 1;
 
             &__header {
-                @include h5-style();
-                color: $white;
+                @include t.h5-style();
+                color: v.$white;
                 text-decoration: none;
                 margin-bottom: 6px;
 
@@ -131,7 +136,7 @@
                 }
             }
             &__text {
-                color: $gray-light;
+                color: v.$gray-light;
             }
         }
     }

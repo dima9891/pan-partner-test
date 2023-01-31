@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@use 'variables' as v;
 
 @mixin container {
     width: 100%;
@@ -6,10 +6,10 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         max-width: 996px;
     }
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         max-width: 1220px;
     }
 }

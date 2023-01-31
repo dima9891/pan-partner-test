@@ -1,12 +1,12 @@
-@import 'container.scss';
-@import 'variables.scss';
+@use 'container';
+@use 'variables' as v;
 
 .slider-block {
-    @include container();
+    @include container.container();
     margin-top: 70px;
     margin-bottom: 70px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         margin-bottom: 120px;
     }
 
@@ -26,12 +26,12 @@
             width: 50px;
             height: 50px;
             opacity: 1;
-            background: $white;
+            background: v.$white;
             box-shadow: 0px 4px 20px rgba(143, 149, 172, 0.2);
 
             svg {
                 width: 10px;
-                fill: $black-light;
+                fill: v.$black-light;
             }
 
             &--prev {
@@ -47,11 +47,11 @@
 
             &__page {
                 height: 7px;
-                background: transparentize($gray-light, 0.7);
+                background: transparentize(v.$gray-light, 0.7);
 
                 &.is-active {
                     transform: none;
-                    background: $red;
+                    background: v.$red;
                 }
             }
         }

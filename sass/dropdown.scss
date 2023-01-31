@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@use 'variables' as v;
 
 .select-wrapper {
     position: relative;
@@ -11,7 +11,7 @@
         flex-direction: column;
         border-width: 1px;
         border-style: solid;
-        border-color: transparentize($gray-light, 0.6);
+        border-color: transparentize(v.$gray-light, 0.6);
         border-radius: 4px;
 
         .select__trigger {
@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 21px;
-            color: $white;
+            color: v.$white;
             height: 60px;
             line-height: 18px;
             background: transparent;
@@ -44,9 +44,9 @@
         top: calc(100% + 1px);
         left: -1px;
         right: -1px;
-        border: 1px solid transparentize($gray-light, 0.6);
+        border: 1px solid transparentize(v.$gray-light, 0.6);
         border-top: 0;
-        background: $black-dark;
+        background: v.$black-dark;
         transition: all 0.5s;
         opacity: 0;
         visibility: hidden;
@@ -59,18 +59,18 @@
             display: block;
             padding: 8.5px 20px 8.5px 19px;
             border-radius: 3px;
-            color: $white;
+            color: v.$white;
             line-height: 18px;
             cursor: pointer;
             transition: all 0.5s;
 
             &:hover {
                 cursor: pointer;
-                background-color: transparentize($gray-light, 0.9);
+                background-color: transparentize(v.$gray-light, 0.9);
             }
 
             &.selected {
-                background-color: transparentize($gray-light, 0.9);
+                background-color: transparentize(v.$gray-light, 0.9);
             }
         }
     }
@@ -94,14 +94,14 @@
     &::before {
         left: -2px;
         transform: rotate(-45deg);
-        background-color: $white;
+        background-color: v.$white;
         border-radius: 3px 3px 0;
     }
 
     &::after {
         left: 2px;
         transform: rotate(45deg);
-        background-color: $white;
+        background-color: v.$white;
         border-radius: 3px 3px 0;
     }
 

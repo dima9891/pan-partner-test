@@ -1,16 +1,16 @@
-@import 'variables.scss';
-@import 'buttons.scss';
-@import 'container.scss';
+@use 'variables' as v;
+@use 'buttons';
+@use 'container';
 
 .hero-screen {
     display: flex;
-    background-color: $black-dark;
-    color: $white;
+    background-color: v.$black-dark;
+    color: v.$white;
     padding-top: 106px;
     padding-bottom: 137px;
 
     &__container {
-        @include container();
+        @include container.container();
         display: flex;
         justify-content: space-between;
         
@@ -18,8 +18,13 @@
 }
 
 .content-block {
-    flex-grow: 1;
-    max-width: 50%;
+    padding: 0 20px;
+
+    @media (min-width: v.$mobile) {
+        flex-grow: 1;
+        max-width: 50%;
+        padding: 0;
+    }
 }
 
 .hero-form {
@@ -31,13 +36,13 @@
         flex-grow: 1;
         width: 100%;
 
-        @media (min-width: $standart-screen) {
+        @media (min-width: v.$standart-screen) {
             width: calc(50% - 15px);
         }
     }
 
     &__button{
-        @include button-red();
+        @include buttons.button-red();
 
         padding: 21px 26px;
         margin: 10px 0;
@@ -47,15 +52,15 @@
     &__label {
         display: block;
         margin-bottom: 6px;
-        color: $gray-light;
+        color: v.$gray-light;
     }
 
     &__input {
         box-sizing: border-box;
         background-color: transparent;
         line-height: 58px;
-        color: $white;
-        border: 1px solid transparentize($gray-light, 0.6);
+        color: v.$white;
+        border: 1px solid transparentize(v.$gray-light, 0.6);
         border-radius: 4px;
         width: 100%;
         padding-left: 21px;
@@ -69,13 +74,19 @@
             margin-bottom: 0;
         }
         &__link {
-            color: $red;
+            color: v.$red;
             text-decoration: none;
         }
     }
 }
 
 .illusration-block {
+    display: none;
+
+    @media (min-width: v.$mobile) {
+        display: block;
+    }
+
     &__img {
         min-width: 309px;
     }

@@ -1,12 +1,18 @@
-@import 'container.scss';
-@import 'buttons.scss';
+@use 'variables' as v;
+@use 'container';
 
 .text-block {
-    @include container();
+    @include container.container();
     display: flex;
-    gap: 62px;
+    flex-direction: column;
+    
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$mobile) {
+        gap: 62px;
+        flex-direction: row;
+    }
+
+    @media (min-width: v.$standart-screen) {
         gap: 0;
     }
 
@@ -15,7 +21,7 @@
 
         &.left {
 
-            @media (min-width: $standart-screen) {
+            @media (min-width: v.$standart-screen) {
                 padding-right: 100px;
             }
         }

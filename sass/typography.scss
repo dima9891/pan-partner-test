@@ -1,8 +1,7 @@
-@import 'variables.scss';
-@import 'fonts.scss';
+@use 'variables' as v;
 
 body {
-    color: $black-light;
+    color: v.$black-light;
 }
 
 @mixin text {
@@ -31,12 +30,12 @@ p, div, summary, .text {
     font-size: 15px;
     line-height: 22px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         font-size: 18px;
         line-height: 26px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         font-size: 20px;
         line-height: 34px;
     }
@@ -48,12 +47,12 @@ p, div, summary, .text {
     font-size: 30px;
     line-height: 35px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         font-size: 42px;
         line-height: 50px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         font-size: 48px;
         line-height: 55px;
     }
@@ -69,12 +68,12 @@ p, div, summary, .text {
     font-size: 26px;
     line-height: 33px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         font-size: 30px;
         line-height: 35px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         font-size: 35px;
         line-height: 40px;
     }
@@ -86,12 +85,12 @@ p, div, summary, .text {
     font-size: 18px;
     line-height: 22px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         font-size: 20px;
         line-height: 26px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         font-size: 25px;
         line-height: 30px;
     }
@@ -103,12 +102,12 @@ p, div, summary, .text {
     font-size: 14px;
     line-height: 18px;
 
-    @media (min-width: $standart-screen) {
+    @media (min-width: v.$standart-screen) {
         font-size: 14px;
         line-height: 17px;
     }
 
-    @media (min-width: $widescreen) {
+    @media (min-width: v.$widescreen) {
         font-size: 16px;
         line-height: 20px;
     }

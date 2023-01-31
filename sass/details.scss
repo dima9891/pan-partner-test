@@ -1,11 +1,11 @@
-@import 'variables.scss';
+@use 'variables' as v;
 
 details.hidden-text {
     padding-top: 30px;
 
     summary {
         cursor: pointer;
-        color: $gray-light;
+        color: v.$gray-light;
         list-style-type: none;
 
         &::-webkit-details-marker {

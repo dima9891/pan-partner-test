@@ -18,7 +18,6 @@
   "homepage": "https://github.com/dima9891/pan-partner-test#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.57.1"
