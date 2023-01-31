@@ -5,11 +5,12 @@
     @include container.container();
     display: flex;
     flex-direction: column;
-    
+    padding: 0 20px;
 
     @media (min-width: v.$mobile) {
         gap: 62px;
         flex-direction: row;
+        padding: 0;
     }
 
     @media (min-width: v.$standart-screen) {

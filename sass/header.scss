@@ -53,13 +53,18 @@
 
 .top-menu {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 
-    @media (min-width: v.$mobile) {
-        flex-wrap: nowrap;
-    }
+    &-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
+        @media (min-width: v.$mobile) {
+            flex-wrap: nowrap;
+        }
+    }
+    
     &__item {
         @include t.h5-style();
         
@@ -93,18 +98,30 @@
         left: 0;
         background-color: v.$black-light;
         z-index: 1;
-        min-width: 535px;
+        min-width: 50vw;
         padding: 0 21px 0 33px;
         border-radius: 9px;
 
         visibility: hidden;
+        display: none;
+
+        @media (min-width: v.$mobile) {
+            min-width: 535px;
+        }
 
         &.open {
             visibility: visible;
+            display: block;
         }
 
         &__group {
             display: flex;
+            flex-direction: column;
+
+            @media (min-width: v.$mobile) {
+                flex-direction: row;
+            }
+
         }
 
         hr {

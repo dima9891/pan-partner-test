@@ -35,10 +35,14 @@
             }
 
             &--prev {
-                left: -25px;
+                @media (min-width: v.$mobile) {
+                    left: -25px;
+                }
             }
             &--next {
-                right: -25px;
+                @media (min-width: v.$mobile) {
+                    right: -25px;
+                }
             }
         }
 

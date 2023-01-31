@@ -1,7 +1,6 @@
 @use 'variables' as v;
 
 @mixin container {
-    width: 100%;
     max-width: 604px;
     margin-left: auto;
     margin-right: auto;
